@@ -1,0 +1,12 @@
+services:
+  - docker
+
+script:
+  - docker build -f Dockerfile -t test-image .
+  - docker run -it test-image which purple
+  - docker run -it test-image which lilac
+  - docker run -it test-image which cobalt
+  - docker run -it test-image which amber
+  - docker run -it test-image which linx
+  - docker run -it test-image which gripss
+
